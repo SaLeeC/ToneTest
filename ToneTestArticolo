@@ -1,4 +1,4 @@
-# Avvisatore acustico di sicurezza
+** Avvisatore acustico di sicurezza **
 
 Verifichiamo l'usailità del comando toe()
 Il comando toe() (già utilizzato quando aiamo fatto suonare la Maker Uno) ci permette di impostare
@@ -45,4 +45,4 @@ inferiore alla lunghezza fissata per la nostra nota (5000 mS ovvero 5 secondi).
 Cosa ne deduciamo?
 Ne deduciamo che la lireria di base Arduino mette a disposizione il comado tone() come comando non
 bloccante per il codice o meglio, il sotto processo che provvede ad eseguire il tono sul piedino
-richiesto viene eseguito senza che l'esecuzione del programma (principale) vega fermata.
+richiesto viene eseguito senza che l'esecuzione del programma (principale) venga fermata.
