@@ -1,0 +1,48 @@
+**Avvisatore acustico di sicurezza**
+
+** Verifichiamo l'usailità del comando toe() **
+Il comando toe() (già utilizzato quando aiamo fatto suonare la Maker Uno) ci permette di impostare
+con grande semplicità il piedio di uscita, la frequenza e la durata del tono ma, cosa succede mentre
+il tono viene emesso?
+Per scoprirlo (in maniera sperimentale) basta caricare il seguente codice
+
+// Test del comado tone()
+//Il codice esegue un too di frequenza Tono1 e durata TTono1
+//sul piedino Sirea (pin 8 dove la Maker Uno ha collegato il buzzer)
+//Il programma ci forisce la lettura del timer intero della scheda
+//espresso in millisecondi rispettivamente:
+// quando inizia il prgramma
+// ogni volta che fa il ciclo della loop()
+//La velocità di comunicazione della seriale è VelocitaSeriale
+
+#define VelocitaSeriale 9600
+
+#define Sirena 8
+
+#define Tono1 1000
+
+#define TTono1 5000
+
+void setup() 
+ {
+   Serial.begin(VelocitaSeriale);
+   Serial.print("Inizio a ");
+   Serial.println(millis());
+ }
+
+void loop() 
+ {
+   tone(Sirena,Tono1, TTono1);
+   Serial.print("Ciclo ");
+   Serial.println(millis());
+ }
+
+che trovate pronto per l'ide al link.
+Una volta compilato e caricato sulla nostra scheda Maker Uno o altra Arduino Uno compatiile, possiamo
+lanciare il monitor seriale e osservare che, i numeri che ci appaiono soo veramente prossimi uno
+all'altro ovvero, il tempo che intercorre fra un giro e l'altro della subroutines loop() è di molto
+inferiore alla lunghezza fissata per la nostra nota (5000 mS ovvero 5 secondi).
+Cosa ne deduciamo?
+Ne deduciamo che la lireria di base Arduino mette a disposizione il comado tone() come comando non
+bloccante per il codice o meglio, il sotto processo che provvede ad eseguire il tono sul piedino
+richiesto viene eseguito senza che l'esecuzione del programma (principale) venga fermata.
