@@ -1,6 +1,6 @@
-#**Avvisatore acustico di sicurezza**
+**Avvisatore acustico di sicurezza**
 
-##**Verifichiamo l'usailità del comando toe()**
+**Verifichiamo l'usailità del comando toe()**
 Il comando toe() (già utilizzato quando aiamo fatto suonare la Maker Uno) ci permette di impostare
 con grande semplicità il piedio di uscita, la frequenza e la durata del tono ma, cosa succede mentre
 il tono viene emesso?
