@@ -7,7 +7,9 @@ il tono viene emesso?
 Per scoprirlo (in maniera sperimentale) basta caricare il seguente codice
 
 // Test del comado tone()
+
 //Il codice esegue un too di frequenza Tono1 e durata TTono1
+
 //sul piedino Sirea (pin 8 dove la Maker Uno ha collegato il buzzer)
 //Il programma ci forisce la lettura del timer intero della scheda
 //espresso in millisecondi rispettivamente:
